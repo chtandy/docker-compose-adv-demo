@@ -1,0 +1,15 @@
+version: '3'
+services:
+  ubuntu:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        BASE_IMAGE: ${BASE_IMAGE}
+        ANSIBLE_VERSION: ${ANSIBLE_VERSION}
+    image: ${RUN_IMAGE}
+    command: bash
+    tty: true
+    container_name: ubuntu
+    hostname: docker-ubuntu
+    restart: unless-stopped
