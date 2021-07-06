@@ -1,3 +1,7 @@
+### env 用途
+- 傳參數到docker build
+- container 環境變數使用
+
 ### docker build 進階
 - 傳參數
 ```
