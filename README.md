@@ -23,4 +23,9 @@ web:
 ```
 docker-compose config
 ```
-
+### 設定環境變數
+```
+export ENV=beta
+```
+### 永久套用
+- 修改 `/etc/environment`
