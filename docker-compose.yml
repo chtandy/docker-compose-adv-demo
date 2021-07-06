@@ -13,3 +13,5 @@ services:
     container_name: ubuntu
     hostname: docker-ubuntu
     restart: unless-stopped
+    env_file:
+    - envfile.env
