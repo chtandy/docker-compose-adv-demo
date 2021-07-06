@@ -1,17 +1,19 @@
 version: '3'
 services:
   ubuntu:
+    image: ${RUN_IMAGE}
     build:
       context: ./
       dockerfile: Dockerfile
       args:
         BASE_IMAGE: ${BASE_IMAGE}
         ANSIBLE_VERSION: ${ANSIBLE_VERSION}
-    image: ${RUN_IMAGE}
+    environment:
+      ENV: ${ENV}
     command: bash
     tty: true
     container_name: ubuntu
     hostname: docker-ubuntu
     restart: unless-stopped
     env_file:
-    - envfile.env
+    - envfile/${ENV}.env
