@@ -8,12 +8,12 @@ services:
       args:
         BASE_IMAGE: ${BASE_IMAGE}
         ANSIBLE_VERSION: ${ANSIBLE_VERSION}
-    environment:
-      ENV: beta
+    #environment:
+    #  ENV: beta
     command: bash
     tty: true
     container_name: ubuntu
     hostname: docker-ubuntu
     restart: unless-stopped
     env_file:
-    - ./envfile/${ENV}.env
+     - ./envfile/${ENV}.env
