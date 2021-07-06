@@ -27,3 +27,5 @@ docker-compose config
 ```
 export ENV=beta
 ```
+### 永久套用
+- 修改 `/etc/environment`
