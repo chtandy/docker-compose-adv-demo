@@ -9,7 +9,7 @@ services:
         BASE_IMAGE: ${BASE_IMAGE}
         ANSIBLE_VERSION: ${ANSIBLE_VERSION}
     environment:
-      ENV: ${ENV}
+      ENV: beta
     command: bash
     tty: true
     container_name: ubuntu
